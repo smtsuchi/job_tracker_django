@@ -4,6 +4,11 @@
 *.pyc
 __pycache__
 media
+db.sqlite3
+staticfiles/
+
+# Claude Code #
+.claude/
 
 # Backup files # 
 *.bak 
@@ -83,13 +88,13 @@ coverage.xml
 *.cover 
 .hypothesis/ 
 
-# Jupyter Notebook 
-.ipynb_checkpoints 
+# Jupyter Notebook
+.ipynb_checkpoints
 
-# pyenv 
-.python-version 
+# pyenv
+# .python-version  # Commented out - we want to commit this for deployment
 
-# celery 
+# celery
 celerybeat-schedule.* 
 
 # SageMath parsed files 

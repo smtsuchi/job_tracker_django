@@ -40,17 +40,17 @@ class Account(AbstractBaseUser):
     is_staff = models.BooleanField(default=False)
     is_superuser = models.BooleanField(default=False)
 
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50, blank=True)
+    last_name = models.CharField(max_length=50, blank=True)
     is_pro = models.BooleanField(default=False)
-    about = models.TextField()
+    about = models.TextField(blank=True)
     night_mode = models.BooleanField(default=False)
-    github = models.CharField(max_length=30)
-    linkedin = models.CharField(max_length=60)
-    website = models.CharField(max_length=60)
+    github = models.CharField(max_length=30, blank=True)
+    linkedin = models.CharField(max_length=60, blank=True)
+    website = models.CharField(max_length=60, blank=True)
     is_public = models.BooleanField(default=True)
-    image = models.ImageField()
-    last_lesson_url = models.CharField(max_length=100)
+    image = models.ImageField(blank=True)
+    last_lesson_url = models.CharField(max_length=100, blank=True)
 
 
     USERNAME_FIELD = 'username'
